@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "mode": "sample",
+    "lastUpdated": "2026-03-18T13:00:00Z",
+    "recommendedArchitecture": {
+      "title": "更方便的接入方式：后端聚合 API + 前端看板",
+      "summary": "前端专注展示，后端统一抓取 RSS / News API / GDELT，并输出标准化事件数据。这样最容易扩展地图、词云、去重和实时刷新。",
+      "options": [
+        {
+          "name": "纯前端直连多个新闻源",
+          "pros": ["开发快", "不需要单独部署后端"],
+          "cons": ["跨域限制多", "数据格式不统一", "很难做去重/实体抽取/缓存"]
+        },
+        {
+          "name": "后端聚合 API（推荐）",
+          "pros": ["统一结构输出", "方便做缓存和去重", "可接 NER / 地理编码 / 摘要", "前端更简单稳定"],
+          "cons": ["需要一个轻量服务层"]
+        }
+      ]
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "title": "美方称将继续在中东维持军事存在，以色列同步评估北部边境威胁",
+      "summary": "华盛顿与耶路撒冷连续释放安全协同信号。报道提到美国军方在东地中海和海湾方向保持戒备，以色列则评估来自黎巴嫩与叙利亚方向的连带风险。",
+      "source": "Demo Wire",
+      "url": "https://example.com/article-1",
+      "publishedAt": "2026-03-18T11:20:00Z",
+      "topic": "us-israel",
+      "locations": [
+        { "name": "Jerusalem", "lat": 31.7683, "lng": 35.2137 },
+        { "name": "Eastern Mediterranean", "lat": 34.5, "lng": 33.4 }
+      ],
+      "keywords": ["United States", "Israel", "military posture", "Jerusalem", "Mediterranean"]
+    },
+    {
+      "id": 2,
+      "title": "以色列与伊朗持续隔空威慑，德黑兰周边防空部署成为舆论焦点",
+      "summary": "多家媒体聚焦伊朗首都周边的防空系统与导弹设施，并追踪以色列安全部门对潜在升级风险的最新表态。",
+      "source": "Regional Monitor",
+      "url": "https://example.com/article-2",
+      "publishedAt": "2026-03-18T09:40:00Z",
+      "topic": "israel-iran",
+      "locations": [{ "name": "Tehran", "lat": 35.6892, "lng": 51.389 }],
+      "keywords": ["Iran", "Tehran", "air defense", "Israel", "deterrence"]
+    },
+    {
+      "id": 3,
+      "title": "美国与海湾盟友会商航运安全，霍尔木兹海峡再次被高频提及",
+      "summary": "海湾地区能源与航运安全成为新一轮讨论核心，分析认为任何以伊摩擦升级都可能迅速影响霍尔木兹海峡与阿曼湾运输风险。",
+      "source": "Open Source Brief",
+      "url": "https://example.com/article-3",
+      "publishedAt": "2026-03-17T22:05:00Z",
+      "topic": "regional",
+      "locations": [
+        { "name": "Strait of Hormuz", "lat": 26.5667, "lng": 56.25 },
+        { "name": "Gulf of Oman", "lat": 24.5, "lng": 58.5 }
+      ],
+      "keywords": ["United States", "Hormuz", "shipping", "Gulf of Oman", "energy"]
+    },
+    {
+      "id": 4,
+      "title": "叙利亚境内疑似关联设施遇袭后，地区媒体追踪伊朗支持网络动态",
+      "summary": "新闻摘要集中提及大马士革周边、补给线路与伊朗支持的地区代理力量，显示舆论焦点已从单点事件延伸到地区网络。",
+      "source": "Conflict Watch",
+      "url": "https://example.com/article-4",
+      "publishedAt": "2026-03-17T18:30:00Z",
+      "topic": "israel-iran",
+      "locations": [{ "name": "Damascus", "lat": 33.5138, "lng": 36.2765 }],
+      "keywords": ["Damascus", "Iran-backed groups", "strike", "supply routes"]
+    },
+    {
+      "id": 5,
+      "title": "白宫就停火与威慑双线发声，强调仍在与以方保持高频沟通",
+      "summary": "美国表态显示，一方面维持对以色列的安全协调，另一方面继续在地区层面寻求危机降级与外交斡旋空间。",
+      "source": "Diplomacy Desk",
+      "url": "https://example.com/article-5",
+      "publishedAt": "2026-03-17T15:15:00Z",
+      "topic": "us-israel",
+      "locations": [
+        { "name": "Washington, D.C.", "lat": 38.9072, "lng": -77.0369 },
+        { "name": "Tel Aviv", "lat": 32.0853, "lng": 34.7818 }
+      ],
+      "keywords": ["White House", "ceasefire", "Israel", "Washington", "diplomacy"]
+    }
+  ]
+}
